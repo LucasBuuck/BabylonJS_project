@@ -1,0 +1,54 @@
+{
+	"tags": "modified",
+	"angle": 2.39,
+	"innerAngle": 0,
+	"exponent": 1,
+	"projectionTextureLightNear": 0.000001,
+	"projectionTextureLightFar": 1000,
+	"projectionTextureUpDirection": {
+		"_isDirty": true,
+		"_x": 0,
+		"_y": 1,
+		"_z": 0
+	},
+	"diffuse": [
+		1,
+		1,
+		1
+	],
+	"specular": [
+		1,
+		1,
+		1
+	],
+	"falloffType": 0,
+	"intensity": 2,
+	"range": 1.7976931348623157e+308,
+	"intensityMode": 0,
+	"radius": 0.00001,
+	"_renderPriority": 0,
+	"shadowEnabled": true,
+	"excludeWithLayerMask": 0,
+	"includeOnlyWithLayerMask": 0,
+	"lightmapMode": 0,
+	"position": [
+		10,
+		10,
+		-6
+	],
+	"direction": [
+		-1,
+		-1,
+		0
+	],
+	"name": "sun",
+	"id": "d9cb69ac-8a76-4bce-9ec5-8c76a5e5ae9c",
+	"uniqueId": 799,
+	"state": "",
+	"metadata": {
+		"script": {}
+	},
+	"type": 2,
+	"animations": [],
+	"ranges": []
+}

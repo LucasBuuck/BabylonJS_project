@@ -1,0 +1,494 @@
+{
+	"materials": [],
+	"meshes": [
+		{
+			"name": "keel",
+			"id": "5f63a7a2-0d70-4765-9e04-45b80ff55014",
+			"uniqueId": 15,
+			"type": "Mesh",
+			"tags": "modified",
+			"position": [
+				-0.6791939843367566,
+				0.4272530597374751,
+				6.4557653499565895
+			],
+			"rotationQuaternion": [
+				0,
+				0,
+				0,
+				1
+			],
+			"scaling": [
+				0.15000000596046448,
+				0.75,
+				0.15000000596046448
+			],
+			"pivotMatrix": {
+				"0": 1,
+				"1": 0,
+				"2": 0,
+				"3": 0,
+				"4": 0,
+				"5": 1,
+				"6": 0,
+				"7": 0,
+				"8": 0,
+				"9": 0,
+				"10": 1,
+				"11": 0,
+				"12": 0,
+				"13": 0,
+				"14": 0,
+				"15": 1
+			},
+			"isEnabled": false,
+			"isVisible": true,
+			"infiniteDistance": false,
+			"pickable": true,
+			"receiveShadows": false,
+			"billboardMode": 0,
+			"visibility": 1,
+			"checkCollisions": true,
+			"isBlocker": false,
+			"overrideMaterialSideOrientation": null,
+			"parentId": "eb9ecf21-f08d-4860-9e57-dcc72f121f3e",
+			"isUnIndexed": false,
+			"geometryId": "91a7719f-0db1-4b53-8f55-95a040f3d1f4",
+			"subMeshes": null,
+			"materialId": "4d6d474e-b19d-4d8d-81cc-aa6a1bbd0d34",
+			"physicsMass": 1,
+			"physicsFriction": 0.2,
+			"physicsRestitution": 1,
+			"physicsImpostor": 2,
+			"metadata": {
+				"isPickable": true,
+				"script": {},
+				"prefab": {
+					"prefabId": "56a99130-79f9-427b-97ac-e4d27a6a912f",
+					"nodeId": "cc9b5c12-eba8-4c58-9edd-89ba5158d654",
+					"properties": {
+						"undefined.value": true,
+						"_scaling.x": true,
+						"_scaling.z": true,
+						"_scaling.y": true,
+						"undefined.y": true
+					}
+				}
+			},
+			"instances": [
+				{
+					"name": "keel 1",
+					"id": "4a851ba6-d592-43a6-a9c1-5c51dcb68f04",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": true,
+					"position": [
+						-0.16072655054153406,
+						0.4261334778399919,
+						1.3770554284581396
+					],
+					"scaling": [
+						0.15000000630913835,
+						0.7500000017433693,
+						0.15000000596046448
+					],
+					"parentId": "eb9ecf21-f08d-4860-9e57-dcc72f121f3e",
+					"rotationQuaternion": [
+						0,
+						0,
+						-0.000034091732231900096,
+						1
+					],
+					"physicsMass": 0.8,
+					"physicsFriction": 0.2,
+					"physicsRestitution": 0.8,
+					"physicsImpostor": 2,
+					"metadata": {
+						"isPickable": true,
+						"script": {}
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "keel 2",
+					"id": "d611f71b-f473-47a9-bc78-11eb33a0c852",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": true,
+					"position": [
+						0.295569424558789,
+						0.4266905706879663,
+						2.0521445600532595
+					],
+					"scaling": [
+						0.15000000596046448,
+						0.75,
+						0.15000000596046448
+					],
+					"parentId": "eb9ecf21-f08d-4860-9e57-dcc72f121f3e",
+					"rotationQuaternion": [
+						0,
+						0,
+						0,
+						1
+					],
+					"physicsMass": 0.8,
+					"physicsFriction": 0.2,
+					"physicsRestitution": 0.8,
+					"physicsImpostor": 2,
+					"metadata": {
+						"isPickable": true,
+						"script": {}
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "keel 3",
+					"id": "9216cc65-2846-4ffd-ae3c-4dd90ad095cc",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": true,
+					"position": [
+						-0.6238067249267368,
+						0.4266842823977551,
+						2.0753069253811325
+					],
+					"scaling": [
+						0.15000000596046448,
+						0.75,
+						0.15000000596046448
+					],
+					"parentId": "eb9ecf21-f08d-4860-9e57-dcc72f121f3e",
+					"rotationQuaternion": [
+						0,
+						0,
+						0,
+						1
+					],
+					"physicsMass": 0.8,
+					"physicsFriction": 0.2,
+					"physicsRestitution": 0.8,
+					"physicsImpostor": 2,
+					"metadata": {
+						"isPickable": true,
+						"script": {}
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "keel 4",
+					"id": "2a5bfe50-4877-4294-bc62-0f3164dd31b8",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": true,
+					"position": [
+						-0.18980217281662876,
+						0.4266769510262292,
+						2.8677020528745945
+					],
+					"scaling": [
+						0.15000000596046448,
+						0.75,
+						0.15000000596046448
+					],
+					"parentId": "eb9ecf21-f08d-4860-9e57-dcc72f121f3e",
+					"rotationQuaternion": [
+						0,
+						0,
+						0,
+						1
+					],
+					"physicsMass": 0.8,
+					"physicsFriction": 0.2,
+					"physicsRestitution": 0.8,
+					"physicsImpostor": 2,
+					"metadata": {
+						"isPickable": true,
+						"script": {}
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "keel 5",
+					"id": "cc848776-45b7-42af-b011-d80bd6befb7b",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": true,
+					"position": [
+						-1.0818514995869226,
+						0.4266703945151085,
+						2.873678253073343
+					],
+					"scaling": [
+						0.15000000596046448,
+						0.75,
+						0.15000000596046448
+					],
+					"parentId": "eb9ecf21-f08d-4860-9e57-dcc72f121f3e",
+					"rotationQuaternion": [
+						0,
+						0,
+						0,
+						1
+					],
+					"physicsMass": 0.8,
+					"physicsFriction": 0.2,
+					"physicsRestitution": 0.8,
+					"physicsImpostor": 2,
+					"metadata": {
+						"isPickable": true,
+						"script": {}
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "keel 6",
+					"id": "ca70bfea-21ce-4ea7-a8e4-db3bef8c8bba",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": true,
+					"position": [
+						0.6193461516594267,
+						0.42666404662025076,
+						2.865644500504244
+					],
+					"scaling": [
+						0.15000000596046448,
+						0.75,
+						0.15000000596046448
+					],
+					"parentId": "eb9ecf21-f08d-4860-9e57-dcc72f121f3e",
+					"rotationQuaternion": [
+						0,
+						0,
+						0,
+						1
+					],
+					"physicsMass": 0.8,
+					"physicsFriction": 0.2,
+					"physicsRestitution": 0.8,
+					"physicsImpostor": 2,
+					"metadata": {
+						"isPickable": true,
+						"script": {}
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "keel 7",
+					"id": "48f27ed4-1bd0-48be-9486-598bd174352a",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": true,
+					"position": [
+						-0.6973776928166968,
+						0.4266582053648887,
+						3.6945415130383368
+					],
+					"scaling": [
+						0.15000000596046448,
+						0.75,
+						0.15000000596046448
+					],
+					"parentId": "eb9ecf21-f08d-4860-9e57-dcc72f121f3e",
+					"rotationQuaternion": [
+						0,
+						0,
+						0,
+						1
+					],
+					"physicsMass": 0.8,
+					"physicsFriction": 0.2,
+					"physicsRestitution": 0.8,
+					"physicsImpostor": 2,
+					"metadata": {
+						"isPickable": true,
+						"script": {}
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "keel 8",
+					"id": "01380ab6-db64-49c5-956e-8195b08b6501",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": true,
+					"position": [
+						0.19465494465279468,
+						0.42665242371417317,
+						3.701535283748865
+					],
+					"scaling": [
+						0.15000000596046448,
+						0.75,
+						0.15000000596046448
+					],
+					"parentId": "eb9ecf21-f08d-4860-9e57-dcc72f121f3e",
+					"rotationQuaternion": [
+						0,
+						0,
+						0,
+						1
+					],
+					"physicsMass": 0.8,
+					"physicsFriction": 0.2,
+					"physicsRestitution": 0.8,
+					"physicsImpostor": 2,
+					"metadata": {
+						"isPickable": true,
+						"script": {}
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "keel 9",
+					"id": "aa6cc389-baf9-4941-be01-4c6c8f2f0642",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": true,
+					"position": [
+						-1.5353298431289948,
+						0.4266456883891128,
+						3.7001536480610113
+					],
+					"scaling": [
+						0.15000000596046448,
+						0.75,
+						0.15000000596046448
+					],
+					"parentId": "eb9ecf21-f08d-4860-9e57-dcc72f121f3e",
+					"rotationQuaternion": [
+						0,
+						0,
+						0,
+						1
+					],
+					"physicsMass": 0.8,
+					"physicsFriction": 0.2,
+					"physicsRestitution": 0.8,
+					"physicsImpostor": 2,
+					"metadata": {
+						"isPickable": true,
+						"script": {}
+					},
+					"animations": [],
+					"ranges": []
+				},
+				{
+					"name": "keel 10",
+					"id": "b447b33c-2386-4c93-8352-75f7a06507a4",
+					"isEnabled": true,
+					"isVisible": true,
+					"isPickable": true,
+					"checkCollisions": true,
+					"position": [
+						1.000000015894571,
+						0.42663871464546627,
+						3.6950426688995743
+					],
+					"scaling": [
+						0.15000000596046448,
+						0.75,
+						0.15000000596046448
+					],
+					"parentId": "eb9ecf21-f08d-4860-9e57-dcc72f121f3e",
+					"rotationQuaternion": [
+						0,
+						0,
+						0,
+						1
+					],
+					"physicsMass": 0.8,
+					"physicsFriction": 0.2,
+					"physicsRestitution": 0.8,
+					"physicsImpostor": 2,
+					"metadata": {
+						"isPickable": true,
+						"script": {}
+					},
+					"animations": [],
+					"ranges": []
+				}
+			],
+			"animations": [],
+			"ranges": [],
+			"layerMask": 268435455,
+			"alphaIndex": 1.7976931348623157e+308,
+			"hasVertexAlpha": false,
+			"overlayAlpha": 0.3,
+			"overlayColor": [
+				1,
+				0,
+				0
+			],
+			"applyFog": true,
+			"delayLoadingFile": "geometries/91a7719f-0db1-4b53-8f55-95a040f3d1f4.babylonbinarymeshdata",
+			"boundingBoxMaximum": [
+				0.5,
+				0.5,
+				0.5
+			],
+			"boundingBoxMinimum": [
+				-0.5,
+				-0.5,
+				-0.5
+			],
+			"_binaryInfo": {
+				"positionsAttrDesc": {
+					"count": 72,
+					"stride": 3,
+					"offset": 0,
+					"dataType": 1
+				},
+				"normalsAttrDesc": {
+					"count": 72,
+					"stride": 3,
+					"offset": 288,
+					"dataType": 1
+				},
+				"uvsAttrDesc": {
+					"count": 48,
+					"stride": 2,
+					"offset": 576,
+					"dataType": 1
+				},
+				"indicesAttrDesc": {
+					"count": 36,
+					"stride": 1,
+					"offset": 768,
+					"dataType": 0
+				},
+				"subMeshesAttrDesc": {
+					"count": 1,
+					"stride": 5,
+					"offset": 912,
+					"dataType": 0
+				}
+			},
+			"positions": null,
+			"normals": null,
+			"uvs": null,
+			"hasUVs": true,
+			"indices": null
+		}
+	],
+	"multiMaterials": [],
+	"lods": []
+}

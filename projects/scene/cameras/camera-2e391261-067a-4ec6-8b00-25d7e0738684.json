@@ -1,0 +1,105 @@
+{
+	"tags": "modified",
+	"ellipsoid": [
+		0.30000000000000004,
+		0.5,
+		0.30000000000000004
+	],
+	"ellipsoidOffset": [
+		0,
+		0,
+		0
+	],
+	"checkCollisions": true,
+	"applyGravity": true,
+	"rotation": [
+		0.00895513681143617,
+		-0.0503449892661565,
+		-0.0019206740806261566
+	],
+	"speed": 1.5,
+	"position": [
+		0.05716496333479881,
+		2.385439872741699,
+		-24.23154640197754
+	],
+	"upVector": [
+		0.0014675903366878629,
+		0.9999580383300781,
+		0.00904031004756689
+	],
+	"fov": 0.6,
+	"minZ": 0.1,
+	"maxZ": 10000,
+	"inertia": 0,
+	"mode": 0,
+	"layerMask": 268435455,
+	"fovMode": 0,
+	"cameraRigMode": 0,
+	"name": "camera",
+	"id": "2e391261-067a-4ec6-8b00-25d7e0738684",
+	"uniqueId": 78,
+	"state": "",
+	"metadata": {
+		"script": {
+			"name": "src/scenes/scene/camera.ts",
+			"properties": {
+				"_forwardKey": {
+					"type": "KeyMap",
+					"value": 90
+				},
+				"_backwardKey": {
+					"type": "KeyMap",
+					"value": 83
+				},
+				"_strafeLeftKey": {
+					"type": "KeyMap",
+					"value": 81
+				},
+				"_strafeRightKey": {
+					"type": "KeyMap",
+					"value": 68
+				},
+				"_ballForceFactor": {
+					"type": "number",
+					"value": 15
+				}
+			}
+		}
+	},
+	"type": "UniversalCamera",
+	"inputsmgr": {
+		"FreeCameraKeyboardMoveInput": {
+			"tags": null,
+			"keysUp": [
+				38
+			],
+			"keysUpward": [
+				33
+			],
+			"keysDown": [
+				40
+			],
+			"keysDownward": [
+				34
+			],
+			"keysLeft": [
+				37
+			],
+			"keysRight": [
+				39
+			]
+		},
+		"FreeCameraMouseInput": {
+			"tags": null,
+			"buttons": [
+				0,
+				1,
+				2
+			],
+			"angularSensibility": 2000
+		}
+	},
+	"animations": [],
+	"ranges": []
+}
