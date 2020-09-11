@@ -4,13 +4,13 @@
 		{
 			"name": "ground_field",
 			"id": "08ce0a77-bd68-4c5b-9a5f-d56f85f3cdf2",
-			"uniqueId": 14,
+			"uniqueId": 11,
 			"type": "Mesh",
 			"tags": "modified",
 			"position": [
-				-0.21004969369225646,
-				0.20999999344348907,
-				-6.6973421185416555
+				-0.1240613814023752,
+				0.21000000834465027,
+				-6.49227121776228
 			],
 			"rotationQuaternion": [
 				0,
@@ -19,9 +19,9 @@
 				0.7071067811865476
 			],
 			"scaling": [
-				24,
+				23.5,
 				0.25,
-				3.799999952316284
+				3.5
 			],
 			"pivotMatrix": {
 				"0": 1,
@@ -51,6 +51,7 @@
 			"checkCollisions": true,
 			"isBlocker": false,
 			"overrideMaterialSideOrientation": null,
+			"parentId": "aa425b71-3eb0-445d-b48d-397f9977feb8",
 			"isUnIndexed": false,
 			"geometryId": "91a7719f-0db1-4b53-8f55-95a040f3d1f4",
 			"subMeshes": null,
@@ -74,7 +75,8 @@
 						"_scaling.z": true,
 						"_position.x": true,
 						"_position.z": true,
-						"ellipsoid.z": true
+						"ellipsoid.z": true,
+						"undefined.y": true
 					}
 				}
 			},

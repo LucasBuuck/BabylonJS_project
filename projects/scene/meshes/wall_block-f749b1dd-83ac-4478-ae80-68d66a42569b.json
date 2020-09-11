@@ -2,28 +2,27 @@
 	"materials": [],
 	"meshes": [
 		{
-			"name": "ground_field",
-			"id": "7f08bdaa-6712-4cfb-aca5-c3ea02321034",
-			"uniqueId": 10,
+			"name": "wall_block",
+			"id": "f749b1dd-83ac-4478-ae80-68d66a42569b",
+			"uniqueId": 494,
 			"type": "Mesh",
 			"tags": "modified",
 			"position": [
-				-0.18999946269498447,
-				0.21000000834465027,
-				-21.641818922855187
+				-0.267792284488678,
+				0.6110626459121704,
+				-19.5283145904541
 			],
-			"rotationQuaternion": [
+			"rotation": [
+				-0.34906584590005296,
 				0,
-				0.7071067811865475,
-				0,
-				0.7071067811865476
+				0
 			],
 			"scaling": [
-				4.592523097991943,
-				0.25,
-				5.162264823913574
+				5,
+				0.6000000201182951,
+				0.04000000132019854
 			],
-			"pivotMatrix": {
+			"localMatrix": {
 				"0": 1,
 				"1": 0,
 				"2": 0,
@@ -53,31 +52,12 @@
 			"overrideMaterialSideOrientation": null,
 			"parentId": "aa425b71-3eb0-445d-b48d-397f9977feb8",
 			"isUnIndexed": false,
-			"geometryId": "b0bb664a-d5fb-4aea-9042-f5f3c91b957f",
+			"geometryId": "4bdf8630-db4c-4528-bd05-632af473fc77",
 			"subMeshes": null,
 			"materialId": "7500ca77-4390-4146-948d-44b0001bb2bf",
-			"physicsMass": 0,
-			"physicsFriction": 0.2,
-			"physicsRestitution": 0,
-			"physicsImpostor": 2,
 			"metadata": {
 				"isPickable": true,
-				"script": {},
-				"prefab": {
-					"prefabId": "56a99130-79f9-427b-97ac-e4d27a6a912f",
-					"nodeId": "cc9b5c12-eba8-4c58-9edd-89ba5158d654",
-					"properties": {
-						"_scaling.x": true,
-						"undefined.x": true,
-						"_physicsImpostor.restitution": true,
-						"_position.y": true,
-						"_scaling.y": true,
-						"_scaling.z": true,
-						"_position.x": true,
-						"_position.z": true,
-						"ellipsoid.z": true
-					}
-				}
+				"script": {}
 			},
 			"instances": [],
 			"animations": [],
@@ -92,7 +72,7 @@
 				0
 			],
 			"applyFog": true,
-			"delayLoadingFile": "geometries/b0bb664a-d5fb-4aea-9042-f5f3c91b957f.babylonbinarymeshdata",
+			"delayLoadingFile": "geometries/4bdf8630-db4c-4528-bd05-632af473fc77.babylonbinarymeshdata",
 			"boundingBoxMaximum": [
 				0.5,
 				0.5,

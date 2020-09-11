@@ -4,12 +4,12 @@
 		{
 			"name": "ground",
 			"id": "b87c0751-53e5-4782-88d9-0461e9457fe1",
-			"uniqueId": 10,
+			"uniqueId": 8,
 			"type": "Mesh",
 			"tags": "modified",
 			"position": [
 				0,
-				0,
+				0.5545128070490479,
 				0
 			],
 			"rotationQuaternion": [
@@ -20,7 +20,7 @@
 			],
 			"scaling": [
 				100,
-				0.1,
+				0.10000000149011612,
 				100
 			],
 			"localMatrix": {
@@ -45,7 +45,7 @@
 			"isVisible": true,
 			"infiniteDistance": false,
 			"pickable": true,
-			"receiveShadows": true,
+			"receiveShadows": false,
 			"billboardMode": 0,
 			"visibility": 1,
 			"checkCollisions": true,
@@ -54,7 +54,7 @@
 			"isUnIndexed": false,
 			"geometryId": "0d38a45c-03a7-4a42-bfc3-977788ff849d",
 			"subMeshes": null,
-			"materialId": "77eb899b-024f-405e-b240-9bb6e5cbe3c3",
+			"materialId": "dec55e9d-1448-4a22-acb4-b3b0c3b30843",
 			"physicsMass": 0,
 			"physicsFriction": 0.2,
 			"physicsRestitution": 0,

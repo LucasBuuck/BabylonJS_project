@@ -1,9 +1,9 @@
 {
-	"tags": "modified",
+	"tags": null,
 	"position": [
-		4.733640193939209,
-		2.119999885559082,
-		1.3002104759216309
+		4.667189121246338,
+		0,
+		0
 	],
 	"rotation": [
 		0,
@@ -20,9 +20,9 @@
 	"infiniteDistance": false,
 	"ignoreNonUniformScaling": false,
 	"reIntegrateRotationIntoRotationQuaternion": false,
-	"name": "keels",
-	"id": "eb9ecf21-f08d-4860-9e57-dcc72f121f3e",
-	"uniqueId": 184,
+	"name": "ground & wall",
+	"id": "aa425b71-3eb0-445d-b48d-397f9977feb8",
+	"uniqueId": 388,
 	"state": "",
 	"metadata": {
 		"script": {}
