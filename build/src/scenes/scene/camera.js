@@ -79,14 +79,16 @@ var PlayerCamera = /** @class */ (function (_super) {
      * Launches a new ball from the camera position to the camera direction.
      */
     PlayerCamera.prototype._launchBall = function (info) {
+        // if (this._ball.instances.length == 0) {
         // Create a new ball instance
         var ballInstance = this._ball.createInstance("ballInstance");
         ballInstance.position.copyFrom(this._ball.getAbsolutePosition());
         // Create physics impostor for the ball instance
-        ballInstance.physicsImpostor = new core_1.PhysicsImpostor(ballInstance, core_1.PhysicsImpostor.SphereImpostor, { mass: 5, friction: 0.2, restitution: 0.2 });
+        ballInstance.physicsImpostor = new core_1.PhysicsImpostor(ballInstance, core_1.PhysicsImpostor.SphereImpostor, { mass: 5, friction: 0.2, restitution: 0.8 });
         // Apply impulse on ball
         var force = this.getDirection(new core_1.Vector3(0, 0, 1)).multiplyByFloats(this._ballForceFactor, this._ballForceFactor, this._ballForceFactor);
         ballInstance.applyImpulse(force, ballInstance.getAbsolutePosition());
+        // }
     };
     __decorate([
         tools_1.fromChildren("ball")

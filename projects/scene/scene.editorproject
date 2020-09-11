@@ -9,13 +9,29 @@
 	],
 	"materials": [
 		{
+			"bindedMeshes": [
+				"5f63a7a2-0d70-4765-9e04-45b80ff55014"
+			],
+			"json": "keel-4d6d474e-b19d-4d8d-81cc-aa6a1bbd0d34.json",
+			"isMultiMaterial": false
+		},
+		{
+			"bindedMeshes": [
+				"05785ea9-880c-4811-8951-793adcbb6db0"
+			],
+			"json": "sky-1e5c1d38-d06f-42d6-a0ba-8777ce485b61.json",
+			"isMultiMaterial": false
+		},
+		{
 			"bindedMeshes": [],
 			"json": "sky-cdc8b068-1ebd-4c87-8cb0-f48a85181271.json",
 			"isMultiMaterial": false
 		},
 		{
-			"bindedMeshes": [],
-			"json": "cube-965b4240-9156-4704-8e39-cc381d3c7123.json",
+			"bindedMeshes": [
+				"f28c95a8-f3fc-4ff6-8522-26f3cc6d5d4c"
+			],
+			"json": "ball-0b776f6c-9111-499d-8207-1c8242d97719.json",
 			"isMultiMaterial": false
 		},
 		{
@@ -27,32 +43,18 @@
 		},
 		{
 			"bindedMeshes": [
-				"1373589d-06dc-4462-ba7d-604b20dd1d44",
 				"94356e70-55de-45de-929c-38c22e2e44ec",
+				"1373589d-06dc-4462-ba7d-604b20dd1d44",
+				"08ce0a77-bd68-4c5b-9a5f-d56f85f3cdf2",
+				"7f08bdaa-6712-4cfb-aca5-c3ea02321034",
 				"c712560f-4b85-4a3c-b797-5abf0c37faa8"
 			],
 			"json": "wall-7500ca77-4390-4146-948d-44b0001bb2bf.json",
 			"isMultiMaterial": false
 		},
 		{
-			"bindedMeshes": [
-				"05785ea9-880c-4811-8951-793adcbb6db0"
-			],
-			"json": "sky-1e5c1d38-d06f-42d6-a0ba-8777ce485b61.json",
-			"isMultiMaterial": false
-		},
-		{
-			"bindedMeshes": [
-				"5f63a7a2-0d70-4765-9e04-45b80ff55014"
-			],
-			"json": "keel-4d6d474e-b19d-4d8d-81cc-aa6a1bbd0d34.json",
-			"isMultiMaterial": false
-		},
-		{
-			"bindedMeshes": [
-				"f28c95a8-f3fc-4ff6-8522-26f3cc6d5d4c"
-			],
-			"json": "ball-0b776f6c-9111-499d-8207-1c8242d97719.json",
+			"bindedMeshes": [],
+			"json": "cube-965b4240-9156-4704-8e39-cc381d3c7123.json",
 			"isMultiMaterial": false
 		},
 		{
@@ -65,24 +67,22 @@
 	],
 	"textures": [
 		"parking.env-82.json",
-		"EnvironmentBRDFTexture0-17.json",
+		"blaster_nmap.jpg-84.json",
 		"blaster_diffuse.jpg-83.json",
-		"blaster_nmap.jpg-84.json"
+		"EnvironmentBRDFTexture0-17.json"
 	],
 	"meshes": [
-		"wall_back-1373589d-06dc-4462-ba7d-604b20dd1d44.json",
-		"Sky-05785ea9-880c-4811-8951-793adcbb6db0.json",
+		"blaster-b6a89645-0d85-44c1-8bf8-b99b8670c51f.json",
 		"ground-b87c0751-53e5-4782-88d9-0461e9457fe1.json",
+		"ground_field-7f08bdaa-6712-4cfb-aca5-c3ea02321034.json",
+		"ground_field-08ce0a77-bd68-4c5b-9a5f-d56f85f3cdf2.json",
 		"ball-f28c95a8-f3fc-4ff6-8522-26f3cc6d5d4c.json",
-		"wall_left-c712560f-4b85-4a3c-b797-5abf0c37faa8.json",
-		"wall_right-94356e70-55de-45de-929c-38c22e2e44ec.json",
 		"keel-5f63a7a2-0d70-4765-9e04-45b80ff55014.json",
-		"blaster-b6a89645-0d85-44c1-8bf8-b99b8670c51f.json"
+		"Sky-05785ea9-880c-4811-8951-793adcbb6db0.json"
 	],
 	"transformNodes": [
-		"field-77eaa5a3-3a86-493f-ae7f-13b589f95b91.json",
 		"keels-eb9ecf21-f08d-4860-9e57-dcc72f121f3e.json",
-		"walls-74b3ed11-8127-4315-be09-f88e60d63ec7.json"
+		"field-77eaa5a3-3a86-493f-ae7f-13b589f95b91.json"
 	],
 	"particleSystems": [],
 	"lights": [
@@ -90,7 +90,10 @@
 			"json": "sun-d9cb69ac-8a76-4bce-9ec5-8c76a5e5ae9c.json"
 		},
 		{
-			"json": "sun-4feef2b5-98b7-4e67-8f39-d8177d8c8b89.json"
+			"json": "sun-c0be6e91-13d5-4e5b-b378-db8f9dc3a0c7.json"
+		},
+		{
+			"json": "sun-02f8c6b5-83b9-4d79-9f6a-164a1640ee79.json"
 		}
 	],
 	"sounds": [],
@@ -269,9 +272,9 @@
 	"project": {
 		"camera": {
 			"tags": "modified",
-			"alpha": -1.7708188138977168,
-			"beta": 1.4524618059769978,
-			"radius": 6.530145743042232,
+			"alpha": -1.2113315456493305,
+			"beta": 1.199665181009166,
+			"radius": 29.13336604415099,
 			"target": [
 				-0.15527085959911302,
 				0.5415019392967224,
@@ -305,9 +308,9 @@
 			],
 			"speed": 2,
 			"position": [
-				-1.4436806871972836,
-				1.3124414111096092,
-				-3.9955590001488925
+				9.395338244027268,
+				11.107293933501424,
+				-23.05498799430135
 			],
 			"upVector": [
 				0,

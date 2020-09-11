@@ -30,7 +30,7 @@
 	"useObjectSpaceNormalMap": false,
 	"useParallax": false,
 	"useParallaxOcclusion": false,
-	"parallaxScaleBias": 0.05,
+	"parallaxScaleBias": 0,
 	"roughness": 0,
 	"indexOfRefraction": 0.98,
 	"invertRefractionY": true,

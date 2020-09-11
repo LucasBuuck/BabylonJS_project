@@ -82,15 +82,21 @@ export default class PlayerCamera extends FreeCamera {
      * Launches a new ball from the camera position to the camera direction.
      */
     private _launchBall(info: PointerInfo): void {
+
+        // if (this._ball.instances.length == 0) {
+
         // Create a new ball instance
         const ballInstance = this._ball.createInstance("ballInstance");
+
         ballInstance.position.copyFrom(this._ball.getAbsolutePosition());
 
         // Create physics impostor for the ball instance
-        ballInstance.physicsImpostor = new PhysicsImpostor(ballInstance, PhysicsImpostor.SphereImpostor, { mass: 5, friction: 0.2, restitution: 0.2 });
+        ballInstance.physicsImpostor = new PhysicsImpostor(ballInstance, PhysicsImpostor.SphereImpostor, { mass: 5, friction: 0.2, restitution: 0.8 });
 
         // Apply impulse on ball
         const force = this.getDirection(new Vector3(0, 0, 1)).multiplyByFloats(this._ballForceFactor, this._ballForceFactor, this._ballForceFactor);
         ballInstance.applyImpulse(force, ballInstance.getAbsolutePosition());
+
+        // }
     }
 }
