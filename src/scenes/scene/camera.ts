@@ -1,4 +1,6 @@
-import { FreeCamera, PointerEventTypes, Mesh, PointerInfo, PhysicsImpostor, Vector3, KeyboardEventTypes, InstancedMesh, TransformNode } from "@babylonjs/core";
+import { FreeCamera, PointerEventTypes, Mesh, PointerInfo, PhysicsImpostor, Vector3, KeyboardEventTypes } from "@babylonjs/core";
+import { TextBlock, AdvancedDynamicTexture, StackPanel} from "@babylonjs/gui";
+import { SSL_OP_CRYPTOPRO_TLSEXT_BUG } from "constants";
 
 import { fromChildren, visibleInInspector, onPointerEvent, onKeyboardEvent, fromScene } from "../tools";
 import Field from "./field";
@@ -29,6 +31,9 @@ export default class PlayerCamera extends FreeCamera {
 
     public pointsOfTurn: number;
 
+    private _scoreboard : TextBlock;
+    private _scoreboardFirstLine : TextBlock;
+    private _turnNumber: number;
     /**
      * Override constructor.
      * @warn do not fill.
@@ -47,13 +52,52 @@ export default class PlayerCamera extends FreeCamera {
         this.keysRight = [this._strafeRightKey];
 
         this.gunMagazine = [null];
+        
+        var scoreUI = AdvancedDynamicTexture.CreateFullscreenUI("UI");
+        
+        const stackPanel = new StackPanel();
+        stackPanel.height = "100%";
+        stackPanel.width = "100%";
+        stackPanel.verticalAlignment = 0;
+        scoreUI.addControl(stackPanel);
+
+        this._scoreboardFirstLine = new TextBlock();
+        this._scoreboardFirstLine.textHorizontalAlignment = TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
+        this._scoreboardFirstLine.fontSize = "24px";
+        this._scoreboardFirstLine.color = "white";
+        this._scoreboardFirstLine.resizeToFit = true;
+        stackPanel.addControl(this._scoreboardFirstLine);
+
+        this._scoreboard = new TextBlock();
+        this._scoreboard.textHorizontalAlignment = TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
+        this._scoreboard.fontSize = "18px";
+        this._scoreboard.color = "white";
+        this._scoreboard.resizeToFit = true;
+        stackPanel.addControl(this._scoreboard);
+
+        this._nbKeelTouched = 0;
+        this._turnNumber = 1;
+    
+    }
+
+    public scoreUpdate() : void{
+        if(this._turnNumber == 1) {
+            this._scoreboard.text = "[ "+this._nbKeelTouched;
+            this._scoreboardFirstLine.text = "1";
+    }
+        else if (this._turnNumber % 2 == 0)
+            this._scoreboard.text = this._scoreboard.text + " | "+ this._nbKeelTouched + " ] ";
+        else {
+        this._scoreboardFirstLine.text = this._scoreboardFirstLine.text + "       " + (Math.round(this._turnNumber/2));
+        this._scoreboard.text = this._scoreboard.text + "[ "+ this._nbKeelTouched;
+        }
     }
 
     /**
      * Called each frame.
      */
     public onUpdate(): void {
-        // Nothing to do now...
+        
     }
 
     /**
@@ -123,5 +167,7 @@ export default class PlayerCamera extends FreeCamera {
             this.gunMagazine[0].applyImpulse(force, this.gunMagazine[0].getAbsolutePosition());
 
         }
+        this.scoreUpdate();
+        ++this._turnNumber;
     }
 }
