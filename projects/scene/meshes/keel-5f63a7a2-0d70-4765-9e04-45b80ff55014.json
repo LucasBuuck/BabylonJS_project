@@ -4,19 +4,19 @@
 		{
 			"name": "keel",
 			"id": "5f63a7a2-0d70-4765-9e04-45b80ff55014",
-			"uniqueId": 13,
+			"uniqueId": 12,
 			"type": "Mesh",
 			"tags": "modified",
 			"position": [
-				-0.677581488263554,
-				0.4269316336650076,
-				6.510926331540462
+				-0.6829429913689272,
+				-0.2406206108510694,
+				6.699963284087492
 			],
 			"rotationQuaternion": [
-				0.02273791292472479,
-				0.019786093943878754,
-				-0.005012987715600491,
-				0.9995330748686783
+				-0.0033422860749033833,
+				0.01948975909732014,
+				-0.011704107726128158,
+				0.9997359612800057
 			],
 			"scaling": [
 				0.15000000596046448,
@@ -62,7 +62,9 @@
 			"physicsImpostor": 2,
 			"metadata": {
 				"isPickable": true,
-				"script": {},
+				"script": {
+					"name": "src/scenes/scene/keel.ts"
+				},
 				"prefab": {
 					"prefabId": "56a99130-79f9-427b-97ac-e4d27a6a912f",
 					"nodeId": "cc9b5c12-eba8-4c58-9edd-89ba5158d654",
@@ -84,8 +86,8 @@
 					"isPickable": true,
 					"checkCollisions": true,
 					"position": [
-						-0.16072678896713008,
-						-1.475048116002947,
+						-0.16072678896909195,
+						-2.006986210348196,
 						1.3770570973882197
 					],
 					"scaling": [
@@ -97,8 +99,8 @@
 					"rotationQuaternion": [
 						0,
 						0,
-						-0.000034091732212088605,
-						0.9999999994188771
+						-0.0000340917322120886,
+						0.9999999994188769
 					],
 					"physicsMass": 0.8,
 					"physicsFriction": 0.2,
@@ -106,7 +108,9 @@
 					"physicsImpostor": 2,
 					"metadata": {
 						"isPickable": true,
-						"script": {}
+						"script": {
+							"name": "src/scenes/scene/keel.ts"
+						}
 					},
 					"animations": [],
 					"ranges": []
@@ -120,7 +124,7 @@
 					"checkCollisions": true,
 					"position": [
 						0.295569424558789,
-						-1.4744909249094391,
+						-2.002170383994887,
 						2.0521531431222435
 					],
 					"scaling": [
@@ -141,7 +145,9 @@
 					"physicsImpostor": 2,
 					"metadata": {
 						"isPickable": true,
-						"script": {}
+						"script": {
+							"name": "src/scenes/scene/keel.ts"
+						}
 					},
 					"animations": [],
 					"ranges": []
@@ -155,7 +161,7 @@
 					"checkCollisions": true,
 					"position": [
 						-0.6238075593917769,
-						-1.474496646955508,
+						-2.002181828087025,
 						2.0753150316129507
 					],
 					"scaling": [
@@ -176,7 +182,9 @@
 					"physicsImpostor": 2,
 					"metadata": {
 						"isPickable": true,
-						"script": {}
+						"script": {
+							"name": "src/scenes/scene/keel.ts"
+						}
 					},
 					"animations": [],
 					"ranges": []
@@ -190,7 +198,7 @@
 					"checkCollisions": true,
 					"position": [
 						-0.1898022920259202,
-						-1.4745042763502667,
+						-2.002197086876542,
 						2.867711112780744
 					],
 					"scaling": [
@@ -211,7 +219,9 @@
 					"physicsImpostor": 2,
 					"metadata": {
 						"isPickable": true,
-						"script": {}
+						"script": {
+							"name": "src/scenes/scene/keel.ts"
+						}
 					},
 					"animations": [],
 					"ranges": []
@@ -225,7 +235,7 @@
 					"checkCollisions": true,
 					"position": [
 						-1.08185376456346,
-						-1.4745109520706805,
+						-2.00221043831737,
 						2.873687789816659
 					],
 					"scaling": [
@@ -246,7 +256,9 @@
 					"physicsImpostor": 2,
 					"metadata": {
 						"isPickable": true,
-						"script": {}
+						"script": {
+							"name": "src/scenes/scene/keel.ts"
+						}
 					},
 					"animations": [],
 					"ranges": []
@@ -260,7 +272,7 @@
 					"checkCollisions": true,
 					"position": [
 						0.619346747705884,
-						-1.4745166741167495,
+						-2.0022218824095077,
 						2.8656540372475594
 					],
 					"scaling": [
@@ -281,7 +293,9 @@
 					"physicsImpostor": 2,
 					"metadata": {
 						"isPickable": true,
-						"script": {}
+						"script": {
+							"name": "src/scenes/scene/keel.ts"
+						}
 					},
 					"animations": [],
 					"ranges": []
@@ -295,7 +309,7 @@
 					"checkCollisions": true,
 					"position": [
 						-0.6973788849096113,
-						-1.4745233498371633,
+						-2.0022352338503353,
 						3.6945515266188185
 					],
 					"scaling": [
@@ -316,7 +330,9 @@
 					"physicsImpostor": 2,
 					"metadata": {
 						"isPickable": true,
-						"script": {}
+						"script": {
+							"name": "src/scenes/scene/keel.ts"
+						}
 					},
 					"animations": [],
 					"ranges": []
@@ -330,7 +346,7 @@
 					"checkCollisions": true,
 					"position": [
 						0.19465494465279468,
-						-1.4745290718832322,
+						-2.0022466779424732,
 						3.701544820492181
 					],
 					"scaling": [
@@ -351,7 +367,9 @@
 					"physicsImpostor": 2,
 					"metadata": {
 						"isPickable": true,
-						"script": {}
+						"script": {
+							"name": "src/scenes/scene/keel.ts"
+						}
 					},
 					"animations": [],
 					"ranges": []
@@ -365,7 +383,7 @@
 					"checkCollisions": true,
 					"position": [
 						-1.5353346115006525,
-						-1.474535747603646,
+						-2.002260029383301,
 						3.7001629463857437
 					],
 					"scaling": [
@@ -386,7 +404,9 @@
 					"physicsImpostor": 2,
 					"metadata": {
 						"isPickable": true,
-						"script": {}
+						"script": {
+							"name": "src/scenes/scene/keel.ts"
+						}
 					},
 					"animations": [],
 					"ranges": []
@@ -400,7 +420,7 @@
 					"checkCollisions": true,
 					"position": [
 						1.0000018040339427,
-						-1.4745424233240598,
+						-2.0022733808241284,
 						3.69505220564289
 					],
 					"scaling": [
@@ -421,7 +441,9 @@
 					"physicsImpostor": 2,
 					"metadata": {
 						"isPickable": true,
-						"script": {}
+						"script": {
+							"name": "src/scenes/scene/keel.ts"
+						}
 					},
 					"animations": [],
 					"ranges": []

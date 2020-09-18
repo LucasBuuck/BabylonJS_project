@@ -1,10 +1,14 @@
-import { FreeCamera, PointerEventTypes, Mesh, PointerInfo, PhysicsImpostor, Vector3, KeyboardEventTypes, InstancedMesh } from "@babylonjs/core";
+import { FreeCamera, PointerEventTypes, Mesh, PointerInfo, PhysicsImpostor, Vector3, KeyboardEventTypes, InstancedMesh, TransformNode } from "@babylonjs/core";
 
-import { fromChildren, visibleInInspector, onPointerEvent, onKeyboardEvent } from "../tools";
+import { fromChildren, visibleInInspector, onPointerEvent, onKeyboardEvent, fromScene } from "../tools";
+import Field from "./field";
 
 export default class PlayerCamera extends FreeCamera {
     @fromChildren("ball")
     private _ball: Mesh;
+
+    @fromScene("field")
+    private field: Field;
 
     public gunMagazine: InstancedMesh[];
 
@@ -22,6 +26,8 @@ export default class PlayerCamera extends FreeCamera {
 
     @visibleInInspector("number", "Ball Force Factor", 1)
     private _ballForceFactor: number;
+
+    public pointsOfTurn: number;
 
     /**
      * Override constructor.
@@ -88,16 +94,24 @@ export default class PlayerCamera extends FreeCamera {
     private _launchBall(info: PointerInfo): void {
 
         if (!this.gunMagazine[0]) this.gunMagazine[0] = null;
-        debugger;
-        // Create a new ball instance
+        
+        // Create a new ball instance,
         if (this.gunMagazine[0] == null) {
 
             this.gunMagazine[0] = this._ball.createInstance("ballInstance");
             setTimeout(() => {
 
-                this.gunMagazine[0].dispose();
-                this.gunMagazine[0] = null;
-            }, 4000);
+                setTimeout(() => { 
+
+                    this.pointsOfTurn = this.field.newTurn(true); 
+                    console.log(this.pointsOfTurn);
+                }, 1000);
+                // add next
+                setTimeout(() => {
+                    this.gunMagazine[0].dispose();
+                    this.gunMagazine[0] = null;
+                }, 1000);
+            }, 5000);
 
             this.gunMagazine[0].position.copyFrom(this._ball.getAbsolutePosition());
 

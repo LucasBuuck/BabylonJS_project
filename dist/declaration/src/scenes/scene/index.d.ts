@@ -7,6 +7,8 @@ import { Scene } from "@babylonjs/core";
  */
 export declare const scriptsMap: {
     "src/scenes/scene/camera.ts": any;
+    "src/scenes/scene/field.ts": any;
+    "src/scenes/scene/keel.ts": any;
 };
 /**
  * Works as an helper, this will:
