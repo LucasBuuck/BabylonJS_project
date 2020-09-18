@@ -30,10 +30,13 @@ export default class PlayerCamera extends FreeCamera {
     private _ballForceFactor: number;
 
     public pointsOfTurn: number;
+    public pointsOfPreviousTurn: number;
+    public pointsTotal: number;
 
     private _scoreboard : TextBlock;
     private _scoreboardFirstLine : TextBlock;
     private _turnNumber: number;
+    private scoreUI: AdvancedDynamicTexture;
     /**
      * Override constructor.
      * @warn do not fill.
@@ -53,13 +56,13 @@ export default class PlayerCamera extends FreeCamera {
 
         this.gunMagazine = [null];
         
-        var scoreUI = AdvancedDynamicTexture.CreateFullscreenUI("UI");
+        this.scoreUI = AdvancedDynamicTexture.CreateFullscreenUI("UI");
         
         const stackPanel = new StackPanel();
         stackPanel.height = "100%";
         stackPanel.width = "100%";
         stackPanel.verticalAlignment = 0;
-        scoreUI.addControl(stackPanel);
+        this.scoreUI.addControl(stackPanel);
 
         this._scoreboardFirstLine = new TextBlock();
         this._scoreboardFirstLine.textHorizontalAlignment = TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
@@ -76,6 +79,8 @@ export default class PlayerCamera extends FreeCamera {
         stackPanel.addControl(this._scoreboard);
 
         this._turnNumber = 1;
+        this.pointsOfPreviousTurn = 0;
+        this.pointsTotal = 0;
     
     }
 
@@ -83,13 +88,31 @@ export default class PlayerCamera extends FreeCamera {
         if(this._turnNumber == 1) {
             this._scoreboard.text = "[ "+this.pointsOfTurn;
             this._scoreboardFirstLine.text = "1";
+            this.pointsOfPreviousTurn = this.pointsOfTurn;
     }
         else if (this._turnNumber % 2 == 0)
-            this._scoreboard.text = this._scoreboard.text + " | "+ this.pointsOfTurn + " ] ";
+        {
+            this._scoreboard.text = this._scoreboard.text + " | "+ (this.pointsOfTurn - this.pointsOfPreviousTurn) + " ] ";
+            this.pointsOfPreviousTurn = 0;
+            this.pointsTotal += this.pointsOfTurn;
+        }
         else {
         this._scoreboardFirstLine.text = this._scoreboardFirstLine.text + "       " + (Math.round(this._turnNumber/2));
         this._scoreboard.text = this._scoreboard.text + "[ "+ this.pointsOfTurn;
+        this.pointsOfPreviousTurn = this.pointsOfTurn;
         }
+    }
+
+    private finalScoreDisplay() : void{
+
+        var finalscore = new TextBlock();
+         finalscore.textHorizontalAlignment = TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
+         finalscore.fontSize = "18px";
+         finalscore.color = "white";
+         finalscore.resizeToFit = true;
+         finalscore.text = "FIN DE PARTIE : \n SCORE : " + this.pointsTotal;
+        this.scoreUI.addControl(finalscore);
+
     }
 
     /**
@@ -135,7 +158,10 @@ export default class PlayerCamera extends FreeCamera {
      * Launches a new ball from the camera position to the camera direction.
      */
     private _launchBall(info: PointerInfo): void {
-
+        if(this._turnNumber == 21){
+            this.finalScoreDisplay();
+        }
+        else {
         if (!this.gunMagazine[0]) this.gunMagazine[0] = null;
         
         // Create a new ball instance,
@@ -169,5 +195,6 @@ export default class PlayerCamera extends FreeCamera {
             this.gunMagazine[0].applyImpulse(force, this.gunMagazine[0].getAbsolutePosition());
 
         }
+    }
     }
 }
