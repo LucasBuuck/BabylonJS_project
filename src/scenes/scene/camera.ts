@@ -1,10 +1,12 @@
-import { FreeCamera, PointerEventTypes, Mesh, PointerInfo, PhysicsImpostor, Vector3, KeyboardEventTypes } from "@babylonjs/core";
+import { FreeCamera, PointerEventTypes, Mesh, PointerInfo, PhysicsImpostor, Vector3, KeyboardEventTypes, InstancedMesh } from "@babylonjs/core";
 
 import { fromChildren, visibleInInspector, onPointerEvent, onKeyboardEvent } from "../tools";
 
 export default class PlayerCamera extends FreeCamera {
     @fromChildren("ball")
     private _ball: Mesh;
+
+    public gunMagazine: InstancedMesh[];
 
     @visibleInInspector("KeyMap", "Forward Key", "z".charCodeAt(0))
     private _forwardKey: number;
@@ -26,7 +28,7 @@ export default class PlayerCamera extends FreeCamera {
      * @warn do not fill.
      */
     // @ts-ignore ignoring the super call as we don't want to re-init
-    private constructor() { }
+    private constructor() {}
 
     /**
      * Called on the scene starts.
@@ -37,6 +39,8 @@ export default class PlayerCamera extends FreeCamera {
         this.keysDown = [this._backwardKey];
         this.keysLeft = [this._strafeLeftKey];
         this.keysRight = [this._strafeRightKey];
+
+        this.gunMagazine = [null];
     }
 
     /**
@@ -83,20 +87,27 @@ export default class PlayerCamera extends FreeCamera {
      */
     private _launchBall(info: PointerInfo): void {
 
-        // if (this._ball.instances.length == 0) {
-
+        if (!this.gunMagazine[0]) this.gunMagazine[0] = null;
+        debugger;
         // Create a new ball instance
-        const ballInstance = this._ball.createInstance("ballInstance");
+        if (this.gunMagazine[0] == null) {
 
-        ballInstance.position.copyFrom(this._ball.getAbsolutePosition());
+            this.gunMagazine[0] = this._ball.createInstance("ballInstance");
+            setTimeout(() => {
 
-        // Create physics impostor for the ball instance
-        ballInstance.physicsImpostor = new PhysicsImpostor(ballInstance, PhysicsImpostor.SphereImpostor, { mass: 5, friction: 0.2, restitution: 0.8 });
+                this.gunMagazine[0].dispose();
+                this.gunMagazine[0] = null;
+            }, 4000);
 
-        // Apply impulse on ball
-        const force = this.getDirection(new Vector3(0, 0, 1)).multiplyByFloats(this._ballForceFactor, this._ballForceFactor, this._ballForceFactor);
-        ballInstance.applyImpulse(force, ballInstance.getAbsolutePosition());
+            this.gunMagazine[0].position.copyFrom(this._ball.getAbsolutePosition());
 
-        // }
+            // Create physics impostor for the ball instance
+            this.gunMagazine[0].physicsImpostor = new PhysicsImpostor(this.gunMagazine[0], PhysicsImpostor.SphereImpostor, { mass: 5, friction: 0.2, restitution: 0.8 });
+
+            // Apply impulse on ball
+            const force = this.getDirection(new Vector3(0, 0, 1)).multiplyByFloats(this._ballForceFactor, this._ballForceFactor, this._ballForceFactor);
+            this.gunMagazine[0].applyImpulse(force, this.gunMagazine[0].getAbsolutePosition());
+
+        }
     }
 }
