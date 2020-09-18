@@ -1,4 +1,4 @@
-import { FreeCamera, PointerEventTypes, Mesh, PointerInfo, PhysicsImpostor, Vector3, KeyboardEventTypes } from "@babylonjs/core";
+import { FreeCamera, PointerEventTypes, Mesh, PointerInfo, PhysicsImpostor, Vector3, KeyboardEventTypes, InstancedMesh } from "@babylonjs/core";
 import { TextBlock, AdvancedDynamicTexture, StackPanel} from "@babylonjs/gui";
 import { SSL_OP_CRYPTOPRO_TLSEXT_BUG } from "constants";
 
@@ -75,21 +75,20 @@ export default class PlayerCamera extends FreeCamera {
         this._scoreboard.resizeToFit = true;
         stackPanel.addControl(this._scoreboard);
 
-        this._nbKeelTouched = 0;
         this._turnNumber = 1;
     
     }
 
     public scoreUpdate() : void{
         if(this._turnNumber == 1) {
-            this._scoreboard.text = "[ "+this._nbKeelTouched;
+            this._scoreboard.text = "[ "+this.pointsOfTurn;
             this._scoreboardFirstLine.text = "1";
     }
         else if (this._turnNumber % 2 == 0)
-            this._scoreboard.text = this._scoreboard.text + " | "+ this._nbKeelTouched + " ] ";
+            this._scoreboard.text = this._scoreboard.text + " | "+ this.pointsOfTurn + " ] ";
         else {
         this._scoreboardFirstLine.text = this._scoreboardFirstLine.text + "       " + (Math.round(this._turnNumber/2));
-        this._scoreboard.text = this._scoreboard.text + "[ "+ this._nbKeelTouched;
+        this._scoreboard.text = this._scoreboard.text + "[ "+ this.pointsOfTurn;
         }
     }
 
@@ -147,8 +146,11 @@ export default class PlayerCamera extends FreeCamera {
 
                 setTimeout(() => { 
 
-                    this.pointsOfTurn = this.field.newTurn(true); 
-                    console.log(this.pointsOfTurn);
+                    console.log(this._turnNumber);
+                    console.log(this._turnNumber % 2);
+                    this.pointsOfTurn = this.field.newTurn(this._turnNumber % 2 == 0); 
+                    this.scoreUpdate();
+                    ++this._turnNumber;
                 }, 1000);
                 // add next
                 setTimeout(() => {
@@ -167,7 +169,5 @@ export default class PlayerCamera extends FreeCamera {
             this.gunMagazine[0].applyImpulse(force, this.gunMagazine[0].getAbsolutePosition());
 
         }
-        this.scoreUpdate();
-        ++this._turnNumber;
     }
 }
