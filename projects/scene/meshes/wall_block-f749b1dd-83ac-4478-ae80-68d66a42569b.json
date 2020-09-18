@@ -4,18 +4,19 @@
 		{
 			"name": "wall_block",
 			"id": "f749b1dd-83ac-4478-ae80-68d66a42569b",
-			"uniqueId": 494,
+			"uniqueId": 26,
 			"type": "Mesh",
 			"tags": "modified",
 			"position": [
-				-0.267792284488678,
-				0.6110626459121704,
-				-19.5283145904541
+				-0.2677927856582526,
+				0.4016194460381399,
+				-19.52836628050843
 			],
-			"rotation": [
-				-0.34906584590005296,
+			"rotationQuaternion": [
+				-0.17364817545169742,
 				0,
-				0
+				0,
+				0.9848077534028133
 			],
 			"scaling": [
 				5,
@@ -55,6 +56,10 @@
 			"geometryId": "4bdf8630-db4c-4528-bd05-632af473fc77",
 			"subMeshes": null,
 			"materialId": "7500ca77-4390-4146-948d-44b0001bb2bf",
+			"physicsMass": 0,
+			"physicsFriction": 0.2,
+			"physicsRestitution": 0,
+			"physicsImpostor": 2,
 			"metadata": {
 				"isPickable": true,
 				"script": {}

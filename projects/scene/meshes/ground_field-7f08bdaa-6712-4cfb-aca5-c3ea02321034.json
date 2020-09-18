@@ -4,13 +4,13 @@
 		{
 			"name": "ground_field",
 			"id": "7f08bdaa-6712-4cfb-aca5-c3ea02321034",
-			"uniqueId": 10,
+			"uniqueId": 9,
 			"type": "Mesh",
 			"tags": "modified",
 			"position": [
-				-0.18999946269498447,
-				0.21000000834465027,
-				-21.641818922855187
+				-0.18999982909227858,
+				0.21000095965039733,
+				-21.641817425588627
 			],
 			"rotationQuaternion": [
 				0,

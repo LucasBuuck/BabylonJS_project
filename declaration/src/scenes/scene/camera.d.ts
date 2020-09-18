@@ -6,6 +6,10 @@ export default class PlayerCamera extends FreeCamera {
     private _strafeLeftKey;
     private _strafeRightKey;
     private _ballForceFactor;
+    private _scoreboard;
+    private _scoreboardFirstLine;
+    private _nbKeelTouched;
+    private _turnNumber;
     /**
      * Override constructor.
      * @warn do not fill.
@@ -15,6 +19,7 @@ export default class PlayerCamera extends FreeCamera {
      * Called on the scene starts.
      */
     onStart(): void;
+    scoreUpdate(): void;
     /**
      * Called each frame.
      */

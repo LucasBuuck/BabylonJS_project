@@ -6,9 +6,9 @@
 		0
 	],
 	"diffuse": [
-		0.09411764705882353,
-		0.09019607843137255,
-		0.09019607843137255
+		0,
+		0,
+		0
 	],
 	"specular": [
 		0,
@@ -48,7 +48,7 @@
 	"checkReadyOnEveryCall": false,
 	"checkReadyOnlyOnce": false,
 	"state": "",
-	"alpha": 0.5031475510517427,
+	"alpha": 1,
 	"backFaceCulling": true,
 	"sideOrientation": 1,
 	"alphaMode": 2,

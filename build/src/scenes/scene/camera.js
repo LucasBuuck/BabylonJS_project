@@ -20,6 +20,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@babylonjs/core");
+var gui_1 = require("@babylonjs/gui");
 var tools_1 = require("../tools");
 var PlayerCamera = /** @class */ (function (_super) {
     __extends(PlayerCamera, _super);
@@ -41,12 +42,43 @@ var PlayerCamera = /** @class */ (function (_super) {
         this.keysDown = [this._backwardKey];
         this.keysLeft = [this._strafeLeftKey];
         this.keysRight = [this._strafeRightKey];
+        var scoreUI = gui_1.AdvancedDynamicTexture.CreateFullscreenUI("UI");
+        var stackPanel = new gui_1.StackPanel();
+        stackPanel.height = "100%";
+        stackPanel.width = "100%";
+        stackPanel.verticalAlignment = 0;
+        scoreUI.addControl(stackPanel);
+        this._scoreboardFirstLine = new gui_1.TextBlock();
+        this._scoreboardFirstLine.textHorizontalAlignment = gui_1.TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
+        this._scoreboardFirstLine.fontSize = "24px";
+        this._scoreboardFirstLine.color = "white";
+        this._scoreboardFirstLine.resizeToFit = true;
+        stackPanel.addControl(this._scoreboardFirstLine);
+        this._scoreboard = new gui_1.TextBlock();
+        this._scoreboard.textHorizontalAlignment = gui_1.TextBlock.HORIZONTAL_ALIGNMENT_CENTER;
+        this._scoreboard.fontSize = "18px";
+        this._scoreboard.color = "white";
+        this._scoreboard.resizeToFit = true;
+        stackPanel.addControl(this._scoreboard);
+        this._nbKeelTouched = 0;
+        this._turnNumber = 1;
+    };
+    PlayerCamera.prototype.scoreUpdate = function () {
+        if (this._turnNumber == 1) {
+            this._scoreboard.text = "[ " + this._nbKeelTouched;
+            this._scoreboardFirstLine.text = "1";
+        }
+        else if (this._turnNumber % 2 == 0)
+            this._scoreboard.text = this._scoreboard.text + " | " + this._nbKeelTouched + " ] ";
+        else {
+            this._scoreboardFirstLine.text = this._scoreboardFirstLine.text + "       " + (Math.round(this._turnNumber / 2));
+            this._scoreboard.text = this._scoreboard.text + "[ " + this._nbKeelTouched;
+        }
     };
     /**
      * Called each frame.
      */
     PlayerCamera.prototype.onUpdate = function () {
-        // Nothing to do now...
     };
     /**
      * Called on the user clicks on the canvas.
@@ -88,6 +120,8 @@ var PlayerCamera = /** @class */ (function (_super) {
         // Apply impulse on ball
         var force = this.getDirection(new core_1.Vector3(0, 0, 1)).multiplyByFloats(this._ballForceFactor, this._ballForceFactor, this._ballForceFactor);
         ballInstance.applyImpulse(force, ballInstance.getAbsolutePosition());
+        this.scoreUpdate();
+        ++this._turnNumber;
         // }
     };
     __decorate([
