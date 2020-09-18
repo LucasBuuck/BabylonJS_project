@@ -1,6 +1,7 @@
-import { FreeCamera } from "@babylonjs/core";
+import { FreeCamera, InstancedMesh } from "@babylonjs/core";
 export default class PlayerCamera extends FreeCamera {
     private _ball;
+    gunMagazine: InstancedMesh[];
     private _forwardKey;
     private _backwardKey;
     private _strafeLeftKey;

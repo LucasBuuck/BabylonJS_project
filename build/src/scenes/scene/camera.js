@@ -41,6 +41,7 @@ var PlayerCamera = /** @class */ (function (_super) {
         this.keysDown = [this._backwardKey];
         this.keysLeft = [this._strafeLeftKey];
         this.keysRight = [this._strafeRightKey];
+        this.gunMagazine = [null];
     };
     /**
      * Called each frame.
@@ -79,16 +80,24 @@ var PlayerCamera = /** @class */ (function (_super) {
      * Launches a new ball from the camera position to the camera direction.
      */
     PlayerCamera.prototype._launchBall = function (info) {
-        // if (this._ball.instances.length == 0) {
+        var _this = this;
+        if (!this.gunMagazine[0])
+            this.gunMagazine[0] = null;
+        debugger;
         // Create a new ball instance
-        var ballInstance = this._ball.createInstance("ballInstance");
-        ballInstance.position.copyFrom(this._ball.getAbsolutePosition());
-        // Create physics impostor for the ball instance
-        ballInstance.physicsImpostor = new core_1.PhysicsImpostor(ballInstance, core_1.PhysicsImpostor.SphereImpostor, { mass: 5, friction: 0.2, restitution: 0.8 });
-        // Apply impulse on ball
-        var force = this.getDirection(new core_1.Vector3(0, 0, 1)).multiplyByFloats(this._ballForceFactor, this._ballForceFactor, this._ballForceFactor);
-        ballInstance.applyImpulse(force, ballInstance.getAbsolutePosition());
-        // }
+        if (this.gunMagazine[0] == null) {
+            this.gunMagazine[0] = this._ball.createInstance("ballInstance");
+            setTimeout(function () {
+                _this.gunMagazine[0].dispose();
+                _this.gunMagazine[0] = null;
+            }, 4000);
+            this.gunMagazine[0].position.copyFrom(this._ball.getAbsolutePosition());
+            // Create physics impostor for the ball instance
+            this.gunMagazine[0].physicsImpostor = new core_1.PhysicsImpostor(this.gunMagazine[0], core_1.PhysicsImpostor.SphereImpostor, { mass: 5, friction: 0.2, restitution: 0.8 });
+            // Apply impulse on ball
+            var force = this.getDirection(new core_1.Vector3(0, 0, 1)).multiplyByFloats(this._ballForceFactor, this._ballForceFactor, this._ballForceFactor);
+            this.gunMagazine[0].applyImpulse(force, this.gunMagazine[0].getAbsolutePosition());
+        }
     };
     __decorate([
         tools_1.fromChildren("ball")
