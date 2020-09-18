@@ -22,41 +22,25 @@
 		},
 		{
 			"bindedMeshes": [],
+			"json": "cube-965b4240-9156-4704-8e39-cc381d3c7123.json",
+			"isMultiMaterial": false
+		},
+		{
+			"bindedMeshes": [],
 			"json": "ground-77eb899b-024f-405e-b240-9bb6e5cbe3c3.json",
 			"isMultiMaterial": false
 		},
 		{
 			"bindedMeshes": [
-				"7f08bdaa-6712-4cfb-aca5-c3ea02321034",
 				"08ce0a77-bd68-4c5b-9a5f-d56f85f3cdf2",
-				"e11ef026-1e83-455b-a85d-ae610a87b9d1",
-				"d6b618e6-6e3b-45f7-96a1-03c3695b3a56",
-				"6b34d0e4-7b48-4b6f-8d46-ad8191f26592",
-				"56567904-41a9-4d02-874b-2d9a468add14",
+				"7f08bdaa-6712-4cfb-aca5-c3ea02321034",
 				"bae58838-9c5d-4c74-a0ef-f8ac12390af9",
-				"a0e92aae-fb68-43c6-a8b3-767f8ef8707f",
-				"f749b1dd-83ac-4478-ae80-68d66a42569b"
+				"e11ef026-1e83-455b-a85d-ae610a87b9d1",
+				"56567904-41a9-4d02-874b-2d9a468add14",
+				"f749b1dd-83ac-4478-ae80-68d66a42569b",
+				"a0e92aae-fb68-43c6-a8b3-767f8ef8707f"
 			],
 			"json": "wall-7500ca77-4390-4146-948d-44b0001bb2bf.json",
-			"isMultiMaterial": false
-		},
-		{
-			"bindedMeshes": [],
-			"json": "cube-965b4240-9156-4704-8e39-cc381d3c7123.json",
-			"isMultiMaterial": false
-		},
-		{
-			"bindedMeshes": [
-				"f28c95a8-f3fc-4ff6-8522-26f3cc6d5d4c"
-			],
-			"json": "ball-0b776f6c-9111-499d-8207-1c8242d97719.json",
-			"isMultiMaterial": false
-		},
-		{
-			"bindedMeshes": [
-				"b6a89645-0d85-44c1-8bf8-b99b8670c51f"
-			],
-			"json": "blaster-71ce380f-e971-41c0-b580-e3e91b316c6f.json",
 			"isMultiMaterial": false
 		},
 		{
@@ -68,36 +52,50 @@
 		},
 		{
 			"bindedMeshes": [
+				"f28c95a8-f3fc-4ff6-8522-26f3cc6d5d4c"
+			],
+			"json": "ball-0b776f6c-9111-499d-8207-1c8242d97719.json",
+			"isMultiMaterial": false
+		},
+		{
+			"bindedMeshes": [
 				"05785ea9-880c-4811-8951-793adcbb6db0"
 			],
 			"json": "sky-1e5c1d38-d06f-42d6-a0ba-8777ce485b61.json",
 			"isMultiMaterial": false
+		},
+		{
+			"bindedMeshes": [
+				"b6a89645-0d85-44c1-8bf8-b99b8670c51f"
+			],
+			"json": "blaster-71ce380f-e971-41c0-b580-e3e91b316c6f.json",
+			"isMultiMaterial": false
 		}
 	],
 	"textures": [
-		"EnvironmentBRDFTexture0-17.json",
 		"blaster_diffuse.jpg-83.json",
+		"blaster_nmap.jpg-84.json",
 		"parking.env-82.json",
-		"blaster_nmap.jpg-84.json"
+		"EnvironmentBRDFTexture0-17.json"
 	],
 	"meshes": [
 		"ground-b87c0751-53e5-4782-88d9-0461e9457fe1.json",
-		"ground_field-08ce0a77-bd68-4c5b-9a5f-d56f85f3cdf2.json",
-		"ground_field-7f08bdaa-6712-4cfb-aca5-c3ea02321034.json",
 		"blaster-b6a89645-0d85-44c1-8bf8-b99b8670c51f.json",
-		"keel-5f63a7a2-0d70-4765-9e04-45b80ff55014.json",
-		"ball-f28c95a8-f3fc-4ff6-8522-26f3cc6d5d4c.json",
-		"Sky-05785ea9-880c-4811-8951-793adcbb6db0.json",
+		"ground_field-7f08bdaa-6712-4cfb-aca5-c3ea02321034.json",
+		"ground_field-08ce0a77-bd68-4c5b-9a5f-d56f85f3cdf2.json",
 		"ground_field-e11ef026-1e83-455b-a85d-ae610a87b9d1.json",
 		"ground_field-bae58838-9c5d-4c74-a0ef-f8ac12390af9.json",
+		"ball-f28c95a8-f3fc-4ff6-8522-26f3cc6d5d4c.json",
 		"ground_field-56567904-41a9-4d02-874b-2d9a468add14.json",
 		"wall_block-f749b1dd-83ac-4478-ae80-68d66a42569b.json",
-		"ground_field-a0e92aae-fb68-43c6-a8b3-767f8ef8707f.json"
+		"ground_field-a0e92aae-fb68-43c6-a8b3-767f8ef8707f.json",
+		"Sky-05785ea9-880c-4811-8951-793adcbb6db0.json",
+		"keel-5f63a7a2-0d70-4765-9e04-45b80ff55014.json"
 	],
 	"transformNodes": [
+		"ground & wall-aa425b71-3eb0-445d-b48d-397f9977feb8.json",
 		"keels-eb9ecf21-f08d-4860-9e57-dcc72f121f3e.json",
-		"field-77eaa5a3-3a86-493f-ae7f-13b589f95b91.json",
-		"ground & wall-aa425b71-3eb0-445d-b48d-397f9977feb8.json"
+		"field-77eaa5a3-3a86-493f-ae7f-13b589f95b91.json"
 	],
 	"particleSystems": [],
 	"lights": [
@@ -287,9 +285,9 @@
 	"project": {
 		"camera": {
 			"tags": "modified",
-			"alpha": 36.09800512102168,
-			"beta": 1.103457510151418,
-			"radius": 28.654116472761796,
+			"alpha": 4.732423989033291,
+			"beta": 1.449423907200871,
+			"radius": 13.655694462154024,
 			"target": [
 				-0.15527085959911302,
 				0.5415019392967224,
@@ -323,9 +321,9 @@
 			],
 			"speed": 2,
 			"position": [
-				-0.930538890228292,
-				13.450526917134711,
-				-23.210162904641734
+				0.11629022361943764,
+				2.194860286855782,
+				-11.192882346837521
 			],
 			"upVector": [
 				0,

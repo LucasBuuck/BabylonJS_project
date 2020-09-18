@@ -83,14 +83,20 @@ var PlayerCamera = /** @class */ (function (_super) {
         var _this = this;
         if (!this.gunMagazine[0])
             this.gunMagazine[0] = null;
-        debugger;
-        // Create a new ball instance
+        // Create a new ball instance,
         if (this.gunMagazine[0] == null) {
             this.gunMagazine[0] = this._ball.createInstance("ballInstance");
             setTimeout(function () {
-                _this.gunMagazine[0].dispose();
-                _this.gunMagazine[0] = null;
-            }, 4000);
+                setTimeout(function () {
+                    _this.pointsOfTurn = _this.field.newTurn(true);
+                    console.log(_this.pointsOfTurn);
+                }, 1000);
+                // add next
+                setTimeout(function () {
+                    _this.gunMagazine[0].dispose();
+                    _this.gunMagazine[0] = null;
+                }, 1000);
+            }, 5000);
             this.gunMagazine[0].position.copyFrom(this._ball.getAbsolutePosition());
             // Create physics impostor for the ball instance
             this.gunMagazine[0].physicsImpostor = new core_1.PhysicsImpostor(this.gunMagazine[0], core_1.PhysicsImpostor.SphereImpostor, { mass: 5, friction: 0.2, restitution: 0.8 });
@@ -102,6 +108,9 @@ var PlayerCamera = /** @class */ (function (_super) {
     __decorate([
         tools_1.fromChildren("ball")
     ], PlayerCamera.prototype, "_ball", void 0);
+    __decorate([
+        tools_1.fromScene("field")
+    ], PlayerCamera.prototype, "field", void 0);
     __decorate([
         tools_1.visibleInInspector("KeyMap", "Forward Key", "z".charCodeAt(0))
     ], PlayerCamera.prototype, "_forwardKey", void 0);

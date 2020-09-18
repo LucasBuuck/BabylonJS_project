@@ -25,7 +25,9 @@
 	"uniqueId": 212,
 	"state": "",
 	"metadata": {
-		"script": {}
+		"script": {
+			"name": "src/scenes/scene/field.ts"
+		}
 	},
 	"type": "TransformNode",
 	"localMatrix": {

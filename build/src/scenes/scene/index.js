@@ -45,6 +45,8 @@ var tools_1 = require("../tools");
  */
 exports.scriptsMap = {
     "src/scenes/scene/camera.ts": require("./camera"),
+    "src/scenes/scene/field.ts": require("./field"),
+    "src/scenes/scene/keel.ts": require("./keel"),
 };
 /**
  * Works as an helper, this will:
